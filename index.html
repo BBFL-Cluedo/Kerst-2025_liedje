@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muziekfragment</title>
+    <style>
+      body {
+   	 	font-family: 'Arial Black', Arial, sans-serif;
+    		margin: 0;
+    		height: 100vh;
+    		background-image: url('Kerstmuziek_afbeelding.png');
+    		background-size: cover;
+   			background-position: center;
+  			background-repeat: no-repeat;
+   		
+		/* Flexbox om inhoud te centreren */
+        	display: flex;
+            justify-content: center; 
+            align-items: center;     
+	}
+
+        button {
+            font-size: 24px;
+            padding: 20px 40px;
+            border-radius: 50px;
+            border: none;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="playMusic()">▶ Play</button>
+	
+	<audio id="music">
+        <source src="Five.MP3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function playMusic() {
+            const audio = document.getElementById('music');
+            audio.currentTime = 0; // altijd opnieuw starten
+            audio.play();
+        }
+    </script>
+   
+
+</body>
+
+
